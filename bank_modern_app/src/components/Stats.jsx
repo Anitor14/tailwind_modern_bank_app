@@ -3,7 +3,7 @@ import styles from "../style";
 
 const Stats = () => {
   return (
-    <section className="flex justify-center items-center flex-row flex-wrap sm:mb-20 mb-6">
+    <section className="flex justify-center items-center flex-row flex-wrap sm:mb-20 mt-6">
       {stats.map((stat) => {
         return (
           <div
