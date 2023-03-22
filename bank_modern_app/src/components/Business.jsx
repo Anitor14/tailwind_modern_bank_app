@@ -2,20 +2,7 @@ import React from "react";
 import { features } from "../constants";
 import styles, { layout } from "../style";
 import Button from "./Button";
-
-const FeatureCard = ({ icon, title, content, index }) => {
-  return (
-    <div
-      className={`flex flex-row p-6 rounded-[20px] ${
-        index !== features.length - 1 ? "mb-6" : "mb-0"
-      } feature-card`}
-    >
-      <div className={`w-[64px] h-[64px]`}>
-        <img src={icon} alt="icon" className="w-[50%] h-[50%] object-contain" />
-      </div>
-    </div>
-  );
-};
+import FeatureCard from "./FeaturesCard";
 
 const Business = () => {
   return (
@@ -35,7 +22,7 @@ const Business = () => {
 
       <div className="flex-1 flex justify-center items-center md:ml-10 ml-0 md:mt-0 mt-10 relative flex-col">
         {features.map((feature, index) => {
-          <FeatureCard key={feature.id} {...feature} index={index} />;
+          return <FeatureCard key={feature.id} {...feature} index={index} />;
         })}
       </div>
     </section>
