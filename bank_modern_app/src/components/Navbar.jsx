@@ -9,7 +9,7 @@ const Navbar = () => {
       <img src={logo} alt="nav-logo" className="w-[124px] h-[32px]" />
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => {
-          return (
+          return (  
             <li
               key={nav.id}
               className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${
@@ -28,7 +28,7 @@ const Navbar = () => {
           className="w-[28px] h-[28px] object-contain"
           onClick={() => setToggle((prev) => !prev)}
         />
-
+  
         <div
           className={`${
             toggle ? "flex" : "hidden"
